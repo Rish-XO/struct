@@ -1,13 +1,16 @@
 package main
-
+ 
 import "fmt"
-
-type person struct {
-	firstName string
-	lastName  string
-}
-
+ 
 func main() {
-	alex := person{firstName: "Alex", lastName: "Anderson"}
-	fmt.Println(alex)
+ name := "bill"
+ 
+ namePointer := &name
+ 
+ fmt.Println(&namePointer)
+ printPointer(namePointer)
+}
+ 
+func printPointer(namePointer *string) {
+ fmt.Println(&namePointer)
 }
